@@ -23,4 +23,3 @@ db.on("disconnected",()=>
     console.log("diconnected to mongodb server");
 })
 module.exports=db;
-// hb
