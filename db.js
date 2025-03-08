@@ -1,9 +1,10 @@
 const mongoose=require('mongoose');
-// const mongooseurl='mongodb://localhost:27017/hotels'
-// const mongooseurl ='mongodb+srv://pranpranam:dQjWxIqcRHAGQnGw@cluster0.tdgrq.mongodb.net/'
-// const mongodburl=process.env.MONGODB_URL_LOCAL;
-const mongodburl=process.env.MONGODB_URL;
 require('dotenv').config();
+// const mongooseurl='mongodb://localhost:27017/hotels'
+// const mongooseurl ='mongodb+srv://pranam:uLToRhdwCz4VhM47@cluster0.tdgrq.mongodb.net/'
+
+const mongooseurl=process.env.mongodburl;
+// const mongooseurl=process.env.MONGODB_URL_LOCAL;
 mongoose.connect(mongooseurl,{
     useNewUrlParser:true,
     useUnifiedTopology:true

@@ -3,10 +3,8 @@ const app=express();
 const db=require('./db');
 // const Person=require('./models/Person'); 
 require('dotenv').config();
-
 const bodyparser=require('body-parser');
 app.use(bodyparser.json());  //req.body
-const PORT=process.env.PORT || 3000;
 
 // app.get('/' ,function(req,res){
 //     res.send("hello welcome");
@@ -85,8 +83,8 @@ const PORT=process.env.PORT || 3000;
 const personRoutes=require('./routes/personRoutes');
 // use the routers
 app.use('/person',personRoutes); //person is used endpoint instead of using in routesperson like get postC
-
-app.listen(3000,()=>
+const PORT =process.env.PORT || 3000;
+app.listen(PORT,()=>
 {
     console.log("listening to port 3000")
 });
